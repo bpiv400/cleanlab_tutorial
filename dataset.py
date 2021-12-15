@@ -65,7 +65,7 @@ def permute(frac, shrink):
                 else:
                     targ = '{}/{}.{}.jpg'.format(true_dir, true_img_name, curr_idx)
                 shutil.copy(src, targ)
-    archive_name = '{}/{}.zip'.format(pathlib.Path(org_path).parent, dataset_name)
+    archive_name = '{}/{}'.format(pathlib.Path(org_path).parent, dataset_name)
     shutil.make_archive(archive_name, 'zip', root_dir=new_path)
 
 
